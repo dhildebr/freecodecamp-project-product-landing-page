@@ -1,5 +1,7 @@
 @import "html5";
 
+@import "customer-testimonials";
+
 body
 {
   border: 0;
@@ -22,8 +24,8 @@ main
   
   padding:
   {
-    top: 24pt;
-    bottom: 36pt;
+    top: 36pt;
+    bottom: 20vh;
     left: 12pt;
     right: 12pt;
   }
@@ -34,71 +36,5 @@ main
     bottom: 0;
     left: auto;
     right: auto;
-  }
-}
-
-div.customer-review
-{
-  width: 75%;
-  
-  &.lalign
-  {
-    margin:
-    {
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 25%;
-    }
-  }
-  
-  &.ralign
-  {
-    margin:
-    {
-      top: 0;
-      bottom: 0;
-      left: 25%;
-      right: 0;
-    }
-  }
-  
-  picture.customer-portrait
-  {
-    display: inline-block;
-    
-    &.lalign
-    {
-      margin:
-      {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: auto;
-      }
-    }
-    
-    &.ralign
-    {
-      margin:
-      {
-        top: 0;
-        bottom: 0;
-        left: auto;
-        right: 0;
-      }
-    }
-  }
-  
-  p.customer-quote
-  {
-    font:
-    {
-      family: "Times New Roman", serif;
-      size: 12pt;
-    }
-    
-    &.lalign { text-align: left; }
-    &.ralign { text-align: right; }
   }
 }

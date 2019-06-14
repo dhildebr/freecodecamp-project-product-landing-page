@@ -1,0 +1,57 @@
+article.customer-review
+{
+  display: flex;
+  box-sizing: border-box;
+  width: (100% * 2 / 3);
+  min-height: 300px;
+  
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  
+  border:
+  {
+    top: 0;
+    bottom: 3pt solid black;
+    left: 0;
+  }
+  
+  &.lalign
+  {
+    flex-direction: row;
+    margin-right: (100% / 3);
+  }
+  
+  &.ralign
+  {
+    flex-direction: row-reverse;
+    margin-left: (100% / 3);
+  }
+  
+  picture.customer-portrait
+  {
+    display: inline-block;
+    width: auto;
+    height: 300px;
+    
+    border: 0;
+    padding: 0;
+    margin: 0;
+    
+    &.lalign { margin-right: 12pt; }
+    &.ralign { margin-left: 12pt;  }
+  }
+  
+  p.customer-quote
+  {
+    display: block;
+    
+    font:
+    {
+      family: "Times New Roman", serif;
+      size: 18pt;
+    }
+    
+    &.lalign { text-align: left;  }
+    &.ralign { text-align: right; }
+  }
+}
