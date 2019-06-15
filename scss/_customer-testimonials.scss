@@ -1,9 +1,15 @@
+@import "mixins";
+
 article.customer-review
 {
   display: flex;
+  position: relative;
   box-sizing: border-box;
+  
   width: (100% * 2 / 3);
   min-height: 300px;
+  
+  padding: 0;
   
   flex-wrap: nowrap;
   align-items: flex-end;
@@ -11,20 +17,90 @@ article.customer-review
   border:
   {
     top: 0;
-    bottom: 3pt solid black;
+    bottom: 3px solid black;
     left: 0;
+  }
+  
+  margin:
+  {
+    top: 0;
+    bottom: 72pt;
+    left: 0;
+    right: 0;
   }
   
   &.lalign
   {
     flex-direction: row;
     margin-right: (100% / 3);
+    
+    // Rounded cap on left side of border
+    &::before
+    {
+      position: absolute;
+      bottom: -3px;
+      left: -1.5px;
+      
+      width: 3px;
+      height: 3px;
+      
+      background: black;
+      border-radius: 50%;
+      
+      content: "";
+    }
+    
+    // Fade to transparent on right side of border
+    &::after
+    {
+      position: absolute;
+      bottom: -3px;
+      left: 100%;
+      
+      width: 50%;
+      height: 3px;
+      
+      @include background-linear-gradient(to right, black, transparent);
+      
+      content: "";
+    }
   }
   
   &.ralign
   {
     flex-direction: row-reverse;
     margin-left: (100% / 3);
+    
+    // Rounded cap on right side of border
+    &::before
+    {
+      position: absolute;
+      bottom: -3px;
+      right: -1.5px;
+      
+      width: 3px;
+      height: 3px;
+      
+      background: black;
+      border-radius: 50%;
+      
+      content: "";
+    }
+    
+    // Fade to transparent on left side of border
+    &::after
+    {
+      position: absolute;
+      bottom: -3px;
+      right: 100%;
+      
+      width: 50%;
+      height: 3px;
+      
+      @include background-linear-gradient(to left, black, transparent);
+      
+      content: "";
+    }
   }
   
   picture.customer-portrait
@@ -45,10 +121,21 @@ article.customer-review
   {
     display: block;
     
+    border: 0;
+    padding: 0;
+    
     font:
     {
       family: "Times New Roman", serif;
       size: 18pt;
+    }
+    
+    margin:
+    {
+      top: 0;
+      bottom: 6pt;
+      left: 0;
+      right: 0;
     }
     
     &.lalign { text-align: left;  }
