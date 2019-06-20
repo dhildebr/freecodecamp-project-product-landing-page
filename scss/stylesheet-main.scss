@@ -39,3 +39,22 @@ main
     right: auto;
   }
 }
+
+header
+{
+  position: fixed;
+}
+
+p
+{
+  font:
+  {
+    family: "Times New Roman", serif;
+    size: 15pt;
+  }
+}
+
+img
+{
+  @include user-select(none);
+}
