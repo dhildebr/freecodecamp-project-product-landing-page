@@ -1,6 +1,7 @@
 @import "html5";
 @import "mixins";
 
+@import "features";
 @import "customer-testimonials";
 
 body
@@ -45,12 +46,39 @@ header
   position: fixed;
 }
 
+section
+{
+  margin-bottom: 7.5vh;
+  
+  &#intro { margin-bottom: 2.5vh; }
+}
+
 p
 {
   font:
   {
-    family: "Times New Roman", serif;
+    family: "Oxygen", sans-serif;
+    weight: 400;
     size: 15pt;
+  }
+  
+  margin:
+  {
+    top: 0;
+    bottom: 12pt;
+    left: auto;
+    right: auto;
+  }
+  
+  &.intro-paragraph
+  {
+    width: 50%;
+    min-width: 800px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
   }
 }
 

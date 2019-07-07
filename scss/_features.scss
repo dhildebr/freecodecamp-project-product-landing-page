@@ -1,0 +1,29 @@
+span.feature-heading
+{
+  font:
+  {
+    family: "Acme", sans-serif;
+    weight: 400;
+    size: 18pt;
+  }
+  
+  &::after
+  {
+    content: " // ";
+    margin-left: 6pt;
+    margin-right: 6pt;
+  }
+}
+
+p.features-paragraph
+{
+  width: 60%;
+  
+  margin:
+  {
+    top: 0;
+    bottom: 6pt;
+    left: 5%;
+    right: 35%;
+  }
+}
