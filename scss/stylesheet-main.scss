@@ -1,4 +1,5 @@
 @import "html5";
+@import "colors";
 @import "mixins";
 
 @import "features";
@@ -10,7 +11,7 @@ body
   padding: 0;
   margin: 0;
   
-  background: black;
+  background: $color-secondary;
   font-size: 0;
 }
 
@@ -22,7 +23,7 @@ main
   width: 100%;
   max-width: 1600px;
   
-  background: lightgrey;
+  background: $color-primary;
   
   padding:
   {
@@ -55,6 +56,8 @@ section
 
 p
 {
+  color: $color-accent;
+  
   font:
   {
     family: "Oxygen", sans-serif;

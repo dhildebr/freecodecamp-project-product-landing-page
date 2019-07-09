@@ -1,3 +1,4 @@
+@import "colors";
 @import "mixins";
 
 article.customer-review
@@ -17,7 +18,7 @@ article.customer-review
   border:
   {
     top: 0;
-    bottom: 3px solid black;
+    bottom: 3px solid $color-accent;
     left: 0;
   }
   
@@ -44,7 +45,7 @@ article.customer-review
       width: 3px;
       height: 3px;
       
-      background: black;
+      background: $color-accent;
       border-radius: 50%;
       
       content: "";
@@ -60,7 +61,7 @@ article.customer-review
       width: 50%;
       height: 3px;
       
-      @include background-linear-gradient(to right, black, transparent);
+      @include background-linear-gradient(to right, $color-accent, transparent);
       
       content: "";
     }
@@ -81,7 +82,7 @@ article.customer-review
       width: 3px;
       height: 3px;
       
-      background: black;
+      background: $color-accent;
       border-radius: 50%;
       
       content: "";
@@ -97,7 +98,7 @@ article.customer-review
       width: 50%;
       height: 3px;
       
-      @include background-linear-gradient(to left, black, transparent);
+      @include background-linear-gradient(to left, $color-accent, transparent);
       
       content: "";
     }
@@ -123,6 +124,8 @@ article.customer-review
     
     border: 0;
     padding: 0;
+    
+    color: $color-accent;
     
     font:
     {
