@@ -45,6 +45,17 @@ main
 header
 {
   position: fixed;
+  
+  &>nav
+  {
+    &>a.nav-link
+    {
+      font:
+      {
+        size: 12pt;
+      }
+    }
+  }
 }
 
 section
