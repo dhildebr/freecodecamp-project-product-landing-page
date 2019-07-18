@@ -27,7 +27,7 @@ main
   
   padding:
   {
-    top: 36pt;
+    top: 60pt;
     bottom: 20vh;
     left: 12pt;
     right: 12pt;
@@ -44,16 +44,78 @@ main
 
 header
 {
+  box-sizing: border-box;
   position: fixed;
+  z-index: 1;
+  
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 75%;
+  max-width: 1200px;
+  height: 36pt;
+  
+  background: $color-secondary;
+  border-bottom-left-radius: 24pt;
+  border-bottom-right-radius: 24pt;
+  
+  padding:
+  {
+    top: 4pt;
+    bottom: 4pt;
+    left: 24pt;
+    right: 24pt;
+  }
   
   &>nav
   {
-    &>a.nav-link
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    &>a.nav-link,
+    &>a.nav-link:link,
+    &>a.nav-link:visited
     {
+      display: inline-block;
+      
+      color: $color-accent;
+      text-decoration: none;
+      
       font:
       {
-        size: 12pt;
+        family: "Acme", sans-serif;
+        weight: 400;
+        size: 18pt;
       }
+      
+      &:not(:last-of-type)::after
+      {
+        content: " :: ";
+        margin-left: 6pt;
+        margin-right: 6pt;
+      }
+    }
+    
+    &>a.nav-link:hover,
+    &>a.nav-link:focus
+    {
+      color: scale-color($color-accent, $lightness: 20%);
+      filter: drop-shadow(1px 1px 0 scale-color($color-accent, $lightness: 50%));
+      outline: none;
+    }
+    
+    &>a.nav-link:active
+    {
+      color: scale-color($color-accent, $lightness: 40%);
+      filter: drop-shadow(1px, 1px, 0 scale-color($color-accent, $lightness: 50%));
+      outline: none;
+      
+      position: relative;
+      top: 1px;
+      left: 1px;
     }
   }
 }
@@ -63,6 +125,7 @@ section
   margin-bottom: 7.5vh;
   
   &#intro { margin-bottom: 2.5vh; }
+  &:last-of-type { margin-bottom: 0; }
 }
 
 p
