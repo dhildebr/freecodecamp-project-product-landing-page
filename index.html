@@ -131,7 +131,9 @@
         
         <div id="video-wrapper">
           <video id="video" width="960px" height="540px" autoplay loop muted>
-            <source src="https://raw.githubusercontent.com/dhildebr/freecodecamp-project-product-landing-page/master/assets/video/UnrelatedVideo.webm" type="video/webm">
+            <source src="https://raw.githubusercontent.com/dhildebr/freecodecamp-project-product-landing-page/master/assets/video/UnrelatedVideo.webm"
+                    type="video/webm"
+                    alt="An unrelated cat video">
             <p>
               Your browser was unable to load the video.
             </p>
@@ -142,13 +144,16 @@
       
       <section id="sign-up">
         
-        <form id="form">
-          <label for="email" id="email-label">Foo bar baz qux.</label>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <label for="email" id="email-label">Sign up for the latest news via Lunar telepathy</label>
           <input type="email" name="email"
                  placeholder="example@wizardguild.org.kd"
-                 alt="An unrelated cat video"
                  required
                  id="email"
+          />
+          <input type="submit"
+                 value="Sign Up"
+                 id="submit"
           />
         </form>
         

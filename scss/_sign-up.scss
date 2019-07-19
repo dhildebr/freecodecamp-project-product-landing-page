@@ -1,0 +1,133 @@
+@import "colors";
+
+form#form
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  
+  margin:
+  {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: auto;
+  }
+}
+
+label#email-label
+{
+  display: block;
+  
+  font:
+  {
+    family: "Acme", sans-serif;
+    weight: 400;
+    size: 18pt;
+  }
+  
+  margin:
+  {
+    top: 0;
+    bottom: 2pt;
+    left: auto;
+    right: auto;
+  }
+}
+
+input[type="email"]#email
+{
+  display: block;
+  
+  width: 480px;
+  max-width: 100%;
+  
+  background: scale-color($color-secondary, $lightness: 75%) border-box;
+  border: 1px dotted $color-accent;
+  border-radius: 12px;
+  
+  color: $color-accent;
+  text-align: center;
+  
+  font:
+  {
+    family: "Oxygen", sans-serif;
+    weight: 400;
+    size: 16pt;
+  }
+  
+  padding:
+  {
+    top: 2pt;
+    bottom: 2pt;
+    left: 6pt;
+    right: 6pt;
+  }
+  
+  margin:
+  {
+    top: 0;
+    bottom: 8pt;
+    left: auto;
+    right: auto;
+  }
+}
+
+input[type="submit"]#submit
+{
+  display: block;
+  
+  width: 360px;
+  max-width: 75%;
+  height: 36pt;
+  
+  background: $color-secondary;
+  @include background-linear-gradient(to bottom,
+      scale-color($color-secondary, $lightness: -20%) 0%,
+      scale-color($color-secondary, $lightness: -20%) 40%,
+      scale-color($color-secondary, $lightness: -40%) 60%,
+      scale-color($color-secondary, $lightness: -40%) 100%);
+  border: 0;
+  border-radius: 12px;
+  
+  color: $color-accent;
+  
+  font:
+  {
+    family: "Oxygen", sans-serif;
+    weight: 400;
+    size: 16pt;
+  }
+  
+  padding:
+  {
+    top: 2pt;
+    bottom: 2pt;
+    left: 6pt;
+    right: 6pt;
+  }
+  
+  &:hover,
+  &:focus
+  {
+    background: scale-color($color-secondary, $lightness: 10%);
+    @include background-linear-gradient(to bottom,
+        scale-color($color-secondary, $lightness: -10%) 0%,
+        scale-color($color-secondary, $lightness: -10%) 40%,
+        scale-color($color-secondary, $lightness: -30%) 60%,
+        scale-color($color-secondary, $lightness: -30%) 100%);
+    
+    outline: none;
+  }
+  
+  &:active
+  {
+    background: scale-color($color-secondary, $lightness: -10%);
+    @include background-linear-gradient(to bottom,
+        scale-color($color-secondary, $lightness: -30%) 0%,
+        scale-color($color-secondary, $lightness: -30%) 40%,
+        scale-color($color-secondary, $lightness: -50%) 60%,
+        scale-color($color-secondary, $lightness: -50%) 100%);
+  }
+}
