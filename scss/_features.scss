@@ -30,4 +30,11 @@ p.features-paragraph
     left: 5%;
     right: 35%;
   }
+  
+  @media(max-width: 1280px)
+  {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
