@@ -48,6 +48,11 @@ main
     padding-left: 0;
     padding-right: 0;
   }
+  
+  @media(max-width: 1024px)
+  {
+    padding-top: 80pt;
+  }
 }
 
 header
@@ -152,6 +157,7 @@ header
     height: auto;
     min-height: 36pt;
     
+    border-bottom: 1px solid $color-accent;
     border-radius: 0;
   }
   

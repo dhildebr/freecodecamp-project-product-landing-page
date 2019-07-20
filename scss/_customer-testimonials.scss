@@ -49,6 +49,8 @@ article.customer-review
       border-radius: 50%;
       
       content: "";
+      
+      @media(max-width: 1280x) { display: none; }
     }
     
     // Fade to transparent on right side of border
@@ -64,6 +66,8 @@ article.customer-review
       @include background-linear-gradient(to right, $color-accent, transparent);
       
       content: "";
+      
+      @media(max-width: 960px) { display: none; }
     }
   }
   
@@ -86,6 +90,8 @@ article.customer-review
       border-radius: 50%;
       
       content: "";
+      
+      @media(max-width: 1280px) { display: none; }
     }
     
     // Fade to transparent on left side of border
@@ -101,6 +107,8 @@ article.customer-review
       @include background-linear-gradient(to left, $color-accent, transparent);
       
       content: "";
+      
+      @media(max-width: 960px) { display: none; }
     }
   }
   
@@ -116,6 +124,11 @@ article.customer-review
     
     &.lalign { margin-right: 12pt; }
     &.ralign { margin-left: 12pt;  }
+    
+    @media(max-width: 960px)
+    {
+      display: none;
+    }
   }
   
   p.customer-quote
@@ -144,5 +157,28 @@ article.customer-review
     
     &.lalign { text-align: left;  }
     &.ralign { text-align: right; }
+    
+    @media(max-width: 960px)
+    {
+      &::before { content: '\201C';}
+      &::after  { content: '\201D'; }
+      
+      &.lalign, &.ralign
+      { text-align: left; }
+    }
+  }
+  
+  @media(max-width: 960px)
+  {
+    width: 100%;
+    min-height: 0;
+    
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    border-bottom: 0;
+    
+    &.lalign { margin-right: 0; }
+    &.ralign { margin-left: 0; }
   }
 }
